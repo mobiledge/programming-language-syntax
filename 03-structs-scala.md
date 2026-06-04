@@ -1,5 +1,7 @@
 # Structs — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/domain-modeling-tools.html)
+
 ```scala
 // Scala uses case classes as the idiomatic struct equivalent
 case class Point(x: Int, y: Int)

@@ -1,5 +1,7 @@
 # Error Handling — JavaScript
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#exception_handling_statements)
+
 ```javascript
 function divide(a, b) {
   if (b === 0) throw new Error("Cannot divide by zero");

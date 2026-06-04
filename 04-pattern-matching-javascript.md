@@ -1,5 +1,7 @@
 # Pattern Matching — JavaScript
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+
 ```javascript
 // JavaScript has no native pattern matching; destructuring + conditionals
 function describe(point) {

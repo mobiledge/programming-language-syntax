@@ -1,5 +1,7 @@
 # Enums — TypeScript
 
+[Docs](https://www.typescriptlang.org/docs/handbook/enums.html)
+
 ```typescript
 // String enum
 enum Direction {

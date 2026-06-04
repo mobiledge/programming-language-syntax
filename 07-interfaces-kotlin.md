@@ -1,5 +1,7 @@
 # Interfaces / Traits — Kotlin
 
+[Docs](https://kotlinlang.org/docs/interfaces.html)
+
 ```kotlin
 interface Animal {
     fun sound(): String

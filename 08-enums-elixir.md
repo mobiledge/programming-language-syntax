@@ -1,5 +1,7 @@
 # Enums — Elixir
 
+[Docs](https://elixir-lang.org/getting-started/basic-types.html#atoms)
+
 ```elixir
 # Elixir uses atoms as enum values; modules group related atoms
 defmodule Direction do

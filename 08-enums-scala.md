@@ -1,5 +1,7 @@
 # Enums — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/types-adts-gadts.html)
+
 ```scala
 // Scala 3 enum
 enum Direction:

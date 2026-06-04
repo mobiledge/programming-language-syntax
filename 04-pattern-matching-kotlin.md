@@ -1,5 +1,7 @@
 # Pattern Matching — Kotlin
 
+[Docs](https://kotlinlang.org/docs/control-flow.html#when-expression)
+
 ```kotlin
 sealed class Shape
 data class Circle(val radius: Double) : Shape()

@@ -1,5 +1,7 @@
 # Interfaces / Traits — Ruby
 
+[Docs](https://ruby-doc.org/core/Module.html)
+
 ```ruby
 # Ruby uses modules as mixins (traits)
 module Animal

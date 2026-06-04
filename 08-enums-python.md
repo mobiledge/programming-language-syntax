@@ -1,5 +1,7 @@
 # Enums — Python
 
+[Docs](https://docs.python.org/3/library/enum.html)
+
 ```python
 from enum import Enum, auto
 

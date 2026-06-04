@@ -1,5 +1,7 @@
 # Enums — Java
 
+[Docs](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
+
 ```java
 enum Direction {
     NORTH, SOUTH, EAST, WEST;

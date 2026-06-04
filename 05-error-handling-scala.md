@@ -1,5 +1,7 @@
 # Error Handling — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/fp-functional-error-handling.html)
+
 ```scala
 import scala.util.{Try, Success, Failure}
 

@@ -1,5 +1,7 @@
 # Structs — Kotlin
 
+[Docs](https://kotlinlang.org/docs/data-classes.html)
+
 ```kotlin
 // Kotlin uses data classes as the idiomatic struct equivalent
 data class Point(val x: Int, val y: Int)

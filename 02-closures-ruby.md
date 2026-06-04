@@ -1,5 +1,7 @@
 # Closures — Ruby
 
+[Docs](https://ruby-doc.org/core/Proc.html)
+
 ```ruby
 add = ->(a, b) { a + b }
 

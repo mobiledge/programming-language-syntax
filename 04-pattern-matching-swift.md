@@ -1,5 +1,7 @@
 # Pattern Matching — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/patterns/)
+
 ```swift
 enum Shape {
     case circle(radius: Double)

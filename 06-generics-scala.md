@@ -1,5 +1,7 @@
 # Generics — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/types-generics.html)
+
 ```scala
 class Stack[T]:
   private var items: List[T] = Nil

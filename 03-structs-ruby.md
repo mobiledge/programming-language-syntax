@@ -1,5 +1,7 @@
 # Structs — Ruby
 
+[Docs](https://ruby-doc.org/core/Struct.html)
+
 ```ruby
 Point = Data.define(:x, :y)  # Ruby 3.2+ immutable struct
 

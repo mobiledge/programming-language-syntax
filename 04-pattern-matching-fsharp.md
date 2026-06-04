@@ -1,5 +1,7 @@
 # Pattern Matching — F#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/match-expressions)
+
 ```fsharp
 type Shape =
     | Circle of radius: float

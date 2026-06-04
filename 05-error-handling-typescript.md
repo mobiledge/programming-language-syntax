@@ -1,5 +1,7 @@
 # Error Handling — TypeScript
 
+[Docs](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
+
 ```typescript
 // TypeScript: Result-style type for typed errors
 type Result<T, E> = { ok: true; value: T } | { ok: false; error: E };

@@ -1,5 +1,7 @@
 # Interfaces / Traits — Haskell
 
+[Docs](https://www.haskell.org/tutorial/classes.html)
+
 ```haskell
 -- Haskell uses typeclasses as interfaces
 class Animal a where

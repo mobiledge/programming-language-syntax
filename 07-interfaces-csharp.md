@@ -1,5 +1,7 @@
 # Interfaces / Traits — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface)
+
 ```csharp
 interface IAnimal
 {

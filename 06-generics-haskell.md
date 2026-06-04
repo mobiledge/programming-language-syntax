@@ -1,5 +1,7 @@
 # Generics — Haskell
 
+[Docs](https://wiki.haskell.org/Polymorphism)
+
 ```haskell
 -- Haskell is parametrically polymorphic by default
 identity :: a -> a

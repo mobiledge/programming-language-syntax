@@ -1,5 +1,7 @@
 # Interfaces / Traits — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/domain-modeling-tools.html#traits)
+
 ```scala
 trait Animal:
   def sound(): String

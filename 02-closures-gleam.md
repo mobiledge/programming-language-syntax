@@ -1,5 +1,7 @@
 # Closures — Gleam
 
+[Docs](https://tour.gleam.run/functions/anonymous-functions/)
+
 ```gleam
 let add = fn(a: Int, b: Int) -> Int { a + b }
 

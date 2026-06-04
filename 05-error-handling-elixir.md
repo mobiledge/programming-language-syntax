@@ -1,5 +1,7 @@
 # Error Handling — Elixir
 
+[Docs](https://elixir-lang.org/getting-started/try-catch-and-rescue.html)
+
 ```elixir
 defmodule Math do
   def divide(_a, 0), do: {:error, "Cannot divide by zero"}

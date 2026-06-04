@@ -1,5 +1,7 @@
 # Pattern Matching — Java
 
+[Docs](https://docs.oracle.com/en/java/javase/21/language/pattern-matching.html)
+
 ```java
 // Java 21 pattern matching in switch
 sealed interface Shape permits Circle, Rect {}

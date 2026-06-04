@@ -1,5 +1,7 @@
 # Interfaces / Traits — Java
 
+[Docs](https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html)
+
 ```java
 interface Animal {
     String sound();

@@ -86,7 +86,19 @@ h1 {
   font-weight: 600;
   border-bottom: 1px solid #e5e5e5;
   background: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+.docs-link {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #888;
+  text-decoration: none;
+}
+
+.docs-link:hover { color: #1a1a1a; }
 
 .tile pre {
   margin: 0;

@@ -1,5 +1,7 @@
 # Enums — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum)
+
 ```csharp
 enum Direction { North, South, East, West }
 

@@ -1,5 +1,7 @@
 # Error Handling — Kotlin
 
+[Docs](https://kotlinlang.org/docs/exceptions.html)
+
 ```kotlin
 // Kotlin: runCatching returns a Result<T>
 fun divide(a: Double, b: Double): Double {

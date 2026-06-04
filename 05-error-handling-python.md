@@ -1,5 +1,7 @@
 # Error Handling — Python
 
+[Docs](https://docs.python.org/3/tutorial/errors.html)
+
 ```python
 def divide(a, b):
     if b == 0:

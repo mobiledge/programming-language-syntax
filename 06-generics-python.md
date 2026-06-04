@@ -1,5 +1,7 @@
 # Generics — Python
 
+[Docs](https://docs.python.org/3/library/typing.html#generics)
+
 ```python
 from typing import TypeVar, Generic
 

@@ -1,5 +1,7 @@
 # Pattern Matching — Elixir
 
+[Docs](https://elixir-lang.org/getting-started/pattern-matching.html)
+
 ```elixir
 defmodule Shapes do
   def area({:circle, r}),      do: :math.pi() * r * r

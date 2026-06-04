@@ -1,5 +1,7 @@
 # Error Handling — Gleam
 
+[Docs](https://tour.gleam.run/data-types/results/)
+
 ```gleam
 import gleam/io
 

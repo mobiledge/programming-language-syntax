@@ -1,5 +1,7 @@
 # Enums — Ruby
 
+[Docs](https://ruby-doc.org/core/Symbol.html)
+
 ```ruby
 # Ruby has no built-in enums; symbols or constants are conventional
 module Direction

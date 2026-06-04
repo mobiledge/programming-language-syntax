@@ -1,5 +1,7 @@
 # Pattern Matching — Gleam
 
+[Docs](https://tour.gleam.run/flow-control/case-expressions/)
+
 ```gleam
 import gleam/io
 import gleam/float

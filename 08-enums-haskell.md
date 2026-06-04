@@ -1,5 +1,7 @@
 # Enums — Haskell
 
+[Docs](https://wiki.haskell.org/Algebraic_data_type)
+
 ```haskell
 data Direction = North | South | East | West
   deriving (Show, Eq, Ord, Enum, Bounded)

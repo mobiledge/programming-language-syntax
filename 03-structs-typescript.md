@@ -1,5 +1,7 @@
 # Structs — TypeScript
 
+[Docs](https://www.typescriptlang.org/docs/handbook/2/objects.html)
+
 ```typescript
 // TypeScript uses interfaces or type aliases as the struct equivalent
 interface Point {

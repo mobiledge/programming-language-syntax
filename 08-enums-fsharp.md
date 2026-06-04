@@ -1,5 +1,7 @@
 # Enums — F#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/discriminated-unions)
+
 ```fsharp
 // Simple enum
 type Direction = North | South | East | West

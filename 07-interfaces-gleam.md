@@ -1,5 +1,7 @@
 # Interfaces / Traits — Gleam
 
+[Docs](https://tour.gleam.run/data-types/custom-types/)
+
 ```gleam
 import gleam/io
 

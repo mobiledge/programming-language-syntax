@@ -1,5 +1,7 @@
 # Pattern Matching — Ruby
 
+[Docs](https://docs.ruby-lang.org/en/master/syntax/pattern_matching_rdoc.html)
+
 ```ruby
 # Ruby 3.0+ find pattern / deconstruct
 point = { x: 1, y: 0 }

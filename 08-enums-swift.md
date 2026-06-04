@@ -1,5 +1,7 @@
 # Enums — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/enumerations/)
+
 ```swift
 enum Direction {
     case north, south, east, west

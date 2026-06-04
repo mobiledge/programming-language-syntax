@@ -1,5 +1,7 @@
 # Generics — Kotlin
 
+[Docs](https://kotlinlang.org/docs/generics.html)
+
 ```kotlin
 class Stack<T> {
     private val items = mutableListOf<T>()

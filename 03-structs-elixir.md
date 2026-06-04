@@ -1,5 +1,7 @@
 # Structs — Elixir
 
+[Docs](https://elixir-lang.org/getting-started/structs.html)
+
 ```elixir
 # Elixir structs are defined inside a module
 defmodule Point do

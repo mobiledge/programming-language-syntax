@@ -1,5 +1,7 @@
 # Interfaces / Traits — F#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/interfaces)
+
 ```fsharp
 type IAnimal =
     abstract member Sound: unit -> string

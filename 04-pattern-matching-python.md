@@ -1,5 +1,7 @@
 # Pattern Matching — Python
 
+[Docs](https://docs.python.org/3/reference/compound_stmts.html#the-match-statement)
+
 ```python
 # Python 3.10+ match/case
 point = (1, 0)

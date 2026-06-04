@@ -1,5 +1,7 @@
 # Error Handling — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/exceptions/)
+
 ```csharp
 double Divide(double a, double b)
 {

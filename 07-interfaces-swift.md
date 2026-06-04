@@ -1,5 +1,7 @@
 # Interfaces / Traits — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/protocols/)
+
 ```swift
 protocol Animal {
     func sound() -> String

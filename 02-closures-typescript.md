@@ -1,5 +1,7 @@
 # Closures — TypeScript
 
+[Docs](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+
 ```typescript
 function makeAdder(x: number): (y: number) => number {
   return function(y) {

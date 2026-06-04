@@ -1,5 +1,7 @@
 # Closures — JavaScript
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
 ```javascript
 function makeAdder(x) {
   return function(y) {

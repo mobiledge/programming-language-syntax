@@ -1,5 +1,7 @@
 # Error Handling — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/errorhandling/)
+
 ```swift
 enum MathError: Error {
     case divisionByZero

@@ -1,5 +1,7 @@
 # Closures — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/closures/)
+
 ```swift
 let add = { (a: Int, b: Int) -> Int in
     return a + b

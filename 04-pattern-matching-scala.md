@@ -1,5 +1,7 @@
 # Pattern Matching — Scala
 
+[Docs](https://docs.scala-lang.org/scala3/book/control-structures.html#match-expressions)
+
 ```scala
 sealed trait Shape
 case class Circle(radius: Double) extends Shape

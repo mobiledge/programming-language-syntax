@@ -1,5 +1,7 @@
 # Pattern Matching — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/patterns)
+
 ```csharp
 abstract record Shape;
 record Circle(double Radius) : Shape;

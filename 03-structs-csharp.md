@@ -1,5 +1,7 @@
 # Structs — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct)
+
 ```csharp
 struct Point
 {

@@ -1,5 +1,7 @@
 # Pattern Matching — Haskell
 
+[Docs](https://www.haskell.org/tutorial/patterns.html)
+
 ```haskell
 data Shape = Circle Double | Rect Double Double
 

@@ -1,5 +1,7 @@
 # Error Handling — Java
 
+[Docs](https://docs.oracle.com/javase/tutorial/essential/exceptions/)
+
 ```java
 double divide(double a, double b) throws ArithmeticException {
     if (b == 0) throw new ArithmeticException("Cannot divide by zero");

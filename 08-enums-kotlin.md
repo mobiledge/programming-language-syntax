@@ -1,5 +1,7 @@
 # Enums — Kotlin
 
+[Docs](https://kotlinlang.org/docs/enum-classes.html)
+
 ```kotlin
 enum class Direction {
     NORTH, SOUTH, EAST, WEST;

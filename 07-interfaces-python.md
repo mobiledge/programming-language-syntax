@@ -1,5 +1,7 @@
 # Interfaces / Traits — Python
 
+[Docs](https://docs.python.org/3/library/abc.html)
+
 ```python
 from abc import ABC, abstractmethod
 

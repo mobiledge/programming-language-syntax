@@ -1,5 +1,7 @@
 # Interfaces / Traits — JavaScript
 
+[Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
 ```javascript
 // JavaScript has no interfaces; duck typing and mixins are used
 const Serializable = (Base) => class extends Base {

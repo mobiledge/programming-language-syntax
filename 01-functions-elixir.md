@@ -1,5 +1,7 @@
 # Functions — Elixir
 
+[Docs](https://elixir-lang.org/getting-started/modules-and-functions.html)
+
 ```elixir
 # Named functions must be defined inside a module
 defmodule Math do

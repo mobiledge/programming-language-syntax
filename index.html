@@ -62,6 +62,11 @@ function extractCode(text) {
   return match ? match[1].replace(/\n$/, "") : "";
 }
 
+function extractDocs(text) {
+  const match = text.match(/^\[Docs\]\(([^)]+)\)/m);
+  return match ? match[1] : null;
+}
+
 let snippets = [];
 
 const langCategories = [
@@ -111,7 +116,10 @@ function render() {
   document.getElementById("grid").innerHTML = filtered.length
     ? filtered.map(s => `
         <div class="tile">
-          <div class="tile-header">${s.lang}</div>
+          <div class="tile-header">
+            <span>${s.lang}</span>
+            ${s.docs ? `<a class="docs-link" href="${s.docs}" target="_blank" rel="noopener">Docs ↗</a>` : ""}
+          </div>
           <pre><code class="language-${s.syntax || "plaintext"}">${s.code.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</code></pre>
         </div>`).join("")
     : `<p class="no-results">No snippets match the current filters.</p>`;
@@ -142,7 +150,7 @@ Promise.all(
     Object.entries(langs).map(([slug, label]) =>
       fetch(`${String(i + 1).padStart(2, "0")}-${t.slug}-${slug}.md`)
         .then(r => r.text())
-        .then(text => ({ topic: t.label, lang: label, syntax: slug, code: extractCode(text) }))
+        .then(text => ({ topic: t.label, lang: label, syntax: slug, code: extractCode(text), docs: extractDocs(text) }))
     )
   )
 ).then(results => {

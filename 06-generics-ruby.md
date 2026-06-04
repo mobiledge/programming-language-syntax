@@ -1,5 +1,7 @@
 # Generics — Ruby
 
+[Docs](https://ruby-doc.org/core/Array.html)
+
 ```ruby
 # Ruby is dynamically typed; all containers are generic by default
 class Stack

@@ -1,5 +1,7 @@
 # Pattern Matching — TypeScript
 
+[Docs](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+
 ```typescript
 type Shape =
   | { kind: "circle"; radius: number }

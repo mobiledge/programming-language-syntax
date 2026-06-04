@@ -1,5 +1,7 @@
 # Structs — Python
 
+[Docs](https://docs.python.org/3/library/dataclasses.html)
+
 ```python
 from dataclasses import dataclass
 

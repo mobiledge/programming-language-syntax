@@ -1,5 +1,7 @@
 # Generics — Java
 
+[Docs](https://docs.oracle.com/javase/tutorial/java/generics/)
+
 ```java
 public class Stack<T> {
     private final List<T> items = new ArrayList<>();

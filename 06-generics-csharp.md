@@ -1,5 +1,7 @@
 # Generics — C#
 
+[Docs](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics)
+
 ```csharp
 class Stack<T>
 {

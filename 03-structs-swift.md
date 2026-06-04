@@ -1,5 +1,7 @@
 # Structs — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/classesandstructures/)
+
 ```swift
 struct Point {
     var x: Int

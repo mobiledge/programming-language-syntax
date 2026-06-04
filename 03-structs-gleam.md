@@ -1,5 +1,7 @@
 # Structs — Gleam
 
+[Docs](https://tour.gleam.run/data-types/records/)
+
 ```gleam
 // Gleam uses custom types with a single variant as the struct equivalent
 type Point {

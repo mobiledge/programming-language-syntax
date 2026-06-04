@@ -1,5 +1,7 @@
 # Generics — Swift
 
+[Docs](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/generics/)
+
 ```swift
 struct Stack<T> {
     private var items: [T] = []

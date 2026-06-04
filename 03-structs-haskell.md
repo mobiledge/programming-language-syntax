@@ -1,5 +1,7 @@
 # Structs — Haskell
 
+[Docs](https://wiki.haskell.org/Record_syntax)
+
 ```haskell
 -- Haskell uses data types with record syntax as the struct equivalent
 data Point = Point
