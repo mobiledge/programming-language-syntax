@@ -5,160 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programming Language Syntax</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f9f9f9;
-      color: #1a1a1a;
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-
-    .filters {
-      display: flex;
-      gap: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-
-    .filter-group label {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: #888;
-    }
-
-    .pill-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .pill {
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid #ddd;
-      background: #fff;
-      font-size: 0.8rem;
-      cursor: pointer;
-      transition: background 0.1s, border-color 0.1s;
-      user-select: none;
-    }
-
-    .pill:hover { border-color: #aaa; }
-
-    .pill.active {
-      background: #1a1a1a;
-      color: #fff;
-      border-color: #1a1a1a;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
-
-    @media (max-width: 900px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 560px) {
-      .grid { grid-template-columns: 1fr; }
-      body { padding: 1rem; }
-    }
-
-    .tile {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    .tile-header {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      border-bottom: 1px solid #e5e5e5;
-      background: #fafafa;
-    }
-
-    .tile pre {
-      margin: 0;
-      padding: 0.75rem;
-      overflow-x: auto;
-      font-size: 0.78rem;
-      line-height: 1.5;
-      background: #fff;
-    }
-
-    .tile code {
-      font-family: "SF Mono", "Fira Code", monospace;
-    }
-
-    .no-results {
-      color: #888;
-      font-size: 0.9rem;
-      padding: 1rem 0;
-    }
-
-    .lang-section {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .lang-category-row {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      flex-wrap: wrap;
-    }
-
-    .category-label {
-      font-size: 0.7rem;
-      color: #aaa;
-      min-width: 4.5rem;
-      flex-shrink: 0;
-    }
-
-    .group-toggle {
-      font-size: 0.75rem;
-      color: #555;
-      cursor: pointer;
-      border: 1px solid #ddd;
-      background: #fff;
-      border-radius: 4px;
-      padding: 0.25rem 0.6rem;
-      white-space: nowrap;
-      transition: border-color 0.1s, color 0.1s;
-      user-select: none;
-    }
-
-    .group-toggle:hover { border-color: #aaa; color: #111; }
-
-    .lang-pills-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      padding-top: 0.25rem;
-      border-top: 1px solid #eee;
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/haskell.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/scala.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/elixir.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/fsharp.min.js"></script>
 </head>
 <body>
 
@@ -178,52 +30,31 @@
 <div class="grid" id="grid"></div>
 
 <script>
-const files = [
-  "01-functions-csharp.md",
-  "01-functions-elixir.md",
-  "01-functions-fsharp.md",
-  "01-functions-gleam.md",
-  "01-functions-haskell.md",
-  "01-functions-java.md",
-  "01-functions-kotlin.md",
-  "01-functions-python.md",
-  "01-functions-ruby.md",
-  "01-functions-scala.md",
-  "01-functions-swift.md",
-  "02-closures-csharp.md",
-  "02-closures-elixir.md",
-  "02-closures-fsharp.md",
-  "02-closures-gleam.md",
-  "02-closures-haskell.md",
-  "02-closures-java.md",
-  "02-closures-kotlin.md",
-  "02-closures-python.md",
-  "02-closures-ruby.md",
-  "02-closures-scala.md",
-  "02-closures-swift.md",
+const topics = [
+  { slug: "functions", label: "Functions" },
+  { slug: "closures",  label: "Closures"  },
+  { slug: "structs",   label: "Structs"   },
 ];
 
-const langDisplay = {
-  csharp: "C#", elixir: "Elixir", fsharp: "F#", gleam: "Gleam",
-  haskell: "Haskell", java: "Java", kotlin: "Kotlin", python: "Python",
-  ruby: "Ruby", scala: "Scala", swift: "Swift",
+const langs = {
+  csharp:     "C#",
+  elixir:     "Elixir",
+  fsharp:     "F#",
+  gleam:      "Gleam",
+  haskell:    "Haskell",
+  java:       "Java",
+  javascript: "JavaScript",
+  kotlin:     "Kotlin",
+  python:     "Python",
+  ruby:       "Ruby",
+  scala:      "Scala",
+  swift:      "Swift",
+  typescript: "TypeScript",
 };
 
-const langSyntax = {
-  "Swift": "swift", "Kotlin": "kotlin", "Java": "java", "C#": "csharp",
-  "Ruby": "ruby", "Python": "python", "Haskell": "haskell", "F#": "fsharp",
-  "Scala": "scala", "Elixir": "elixir", "Gleam": "gleam",
-};
-
-function parseFile(filename, text) {
-  const parts = filename.replace(/\.md$/, "").split("-");
-  const topicSlug = parts[1];
-  const langSlug  = parts[2];
-  const topic = topicSlug.charAt(0).toUpperCase() + topicSlug.slice(1);
-  const lang  = langDisplay[langSlug] || langSlug;
+function extractCode(text) {
   const match = text.match(/^```[^\n]*\n([\s\S]*?)^```/m);
-  const code  = match ? match[1].replace(/\n$/, "") : "";
-  return { topic, lang, code };
+  return match ? match[1].replace(/\n$/, "") : "";
 }
 
 let snippets = [];
@@ -232,116 +63,87 @@ const langCategories = [
   {
     label: "Paradigm",
     groups: [
-      { label: "Object-Oriented", langs: ["Swift", "Kotlin", "Java", "C#", "Ruby", "Python"] },
-      { label: "Functional",      langs: ["Haskell", "F#", "Scala", "Elixir", "Gleam"] }
+      { label: "Imperative", langs: ["swift", "kotlin", "java", "csharp", "ruby", "python", "javascript", "typescript"] },
+      { label: "Functional",      langs: ["haskell", "fsharp", "scala", "elixir", "gleam"] }
     ]
   },
   {
     label: "Type System",
     groups: [
-      { label: "Static",  langs: ["Swift", "Kotlin", "Java", "C#", "Haskell", "F#", "Scala", "Gleam"] },
-      { label: "Dynamic", langs: ["Ruby", "Python", "Elixir"] }
+      { label: "Static",  langs: ["swift", "kotlin", "java", "csharp", "haskell", "fsharp", "scala", "gleam", "typescript"] },
+      { label: "Dynamic", langs: ["ruby", "python", "elixir", "javascript"] }
     ]
   }
 ];
 
-let allTopics = [];
-const allLangs  = ["Swift", "Kotlin", "Java", "C#", "Ruby", "Python", "Haskell", "F#", "Scala", "Elixir", "Gleam"];
+let activeTopic = topics[0].label;
+let activeLangs = new Set(Object.values(langs));
 
-let activeTopic = null;
-let activeLangs = new Set(allLangs);
-
-function groupState(group) {
-  const on = group.langs.filter(l => activeLangs.has(l)).length;
-  if (on === group.langs.length) return "all";
-  if (on === 0) return "none";
-  return "some";
-}
-
-function renderPills() {
-  const tp = document.getElementById("topic-pills");
-  tp.innerHTML = allTopics.map(t =>
-    `<span class="pill ${t === activeTopic ? 'active' : ''}" data-topic="${t}">${t}</span>`
+function render() {
+  // Topic pills
+  document.getElementById("topic-pills").innerHTML = topics.map(t =>
+    `<span class="pill ${t.label === activeTopic ? 'active' : ''}" data-topic="${t.label}">${t.label}</span>`
   ).join("");
 
-  const section = document.getElementById("lang-section");
-  const categoryRows = langCategories.map((cat, ci) => {
-    const toggles = cat.groups.map((group, gi) => {
-      const off = groupState(group) === "none";
-      const label = off ? `+ ${group.label}` : `− ${group.label}`;
-      return `<span class="group-toggle" data-cat="${ci}" data-group="${gi}">${label}</span>`;
-    }).join("");
-    return `<div class="lang-category-row">
+  // Language section
+  const categoryRows = langCategories.map((cat, ci) =>
+    `<div class="lang-category-row">
       <span class="category-label">${cat.label}</span>
-      ${toggles}
-    </div>`;
-  }).join("");
+      ${cat.groups.map((group, gi) =>
+        `<span class="group-toggle" data-cat="${ci}" data-group="${gi}">${group.label}</span>`
+      ).join("")}
+    </div>`
+  ).join("");
 
-  const pills = allLangs.map(l =>
+  const pills = Object.values(langs).map(l =>
     `<span class="pill ${activeLangs.has(l) ? 'active' : ''}" data-lang="${l}">${l}</span>`
   ).join("");
 
-  section.innerHTML = categoryRows + `<div class="lang-pills-row">${pills}</div>`;
-}
+  document.getElementById("lang-section").innerHTML = categoryRows + `<div class="lang-pills-row">${pills}</div>`;
 
-function renderGrid() {
-  const grid = document.getElementById("grid");
+  // Grid
   const filtered = snippets.filter(s => s.topic === activeTopic && activeLangs.has(s.lang));
+  document.getElementById("grid").innerHTML = filtered.length
+    ? filtered.map(s => `
+        <div class="tile">
+          <div class="tile-header">${s.lang}</div>
+          <pre><code class="language-${s.syntax || "plaintext"}">${s.code.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</code></pre>
+        </div>`).join("")
+    : `<p class="no-results">No snippets match the current filters.</p>`;
 
-  if (!filtered.length) {
-    grid.innerHTML = `<p class="no-results">No snippets match the current filters.</p>`;
-    return;
-  }
-
-  grid.innerHTML = filtered.map(s => {
-    const lang = langSyntax[s.lang] || "plaintext";
-    const escaped = s.code.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-    return `
-      <div class="tile">
-        <div class="tile-header">${s.lang}</div>
-        <pre><code class="language-${lang}">${escaped}</code></pre>
-      </div>`;
-  }).join("");
-
-  grid.querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
+  document.getElementById("grid").querySelectorAll("pre code").forEach(el => hljs.highlightElement(el));
 }
 
 document.getElementById("topic-pills").addEventListener("click", e => {
-  const t = e.target.dataset.topic;
-  if (t) { activeTopic = t; renderPills(); renderGrid(); }
+  if (e.target.dataset.topic) { activeTopic = e.target.dataset.topic; render(); }
 });
 
 document.getElementById("lang-section").addEventListener("click", e => {
   if (e.target.dataset.cat !== undefined) {
     const group = langCategories[+e.target.dataset.cat].groups[+e.target.dataset.group];
-    const off = groupState(group) === "none";
-    if (off) {
-      group.langs.forEach(l => activeLangs.add(l));
-    } else {
-      const wouldRemain = allLangs.filter(l => activeLangs.has(l) && !group.langs.includes(l));
-      if (wouldRemain.length > 0) group.langs.forEach(l => activeLangs.delete(l));
-    }
-    renderPills(); renderGrid(); return;
+    activeLangs = new Set(group.langs.map(s => langs[s]));
+    render(); return;
   }
   const l = e.target.dataset.lang;
-  if (!l) return;
-  if (activeLangs.has(l)) {
-    if (activeLangs.size > 1) activeLangs.delete(l);
-  } else {
-    activeLangs.add(l);
+  if (l) {
+    if (activeLangs.has(l)) { if (activeLangs.size > 1) activeLangs.delete(l); }
+    else activeLangs.add(l);
+    render();
   }
-  renderPills();
-  renderGrid();
 });
 
-Promise.all(files.map(f => fetch(f).then(r => r.text()).then(t => parseFile(f, t))))
-  .then(results => {
-    snippets = results;
-    allTopics = [...new Set(snippets.map(s => s.topic))];
-    activeTopic = allTopics[0];
-    renderPills();
-    renderGrid();
-  });
+Promise.all(
+  topics.flatMap((t, i) =>
+    Object.entries(langs).map(([slug, label]) =>
+      fetch(`${String(i + 1).padStart(2, "0")}-${t.slug}-${slug}.md`)
+        .then(r => r.text())
+        .then(text => ({ topic: t.label, lang: label, syntax: slug, code: extractCode(text) }))
+    )
+  )
+).then(results => {
+  snippets = results;
+  render();
+});
 </script>
 </body>
 </html>
