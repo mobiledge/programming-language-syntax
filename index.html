@@ -41,21 +41,30 @@ const topics = [
   { slug: "enums",            label: "Enums"             },
 ];
 
+const SI  = n => `https://cdn.simpleicons.org/${n}`;
+const DI  = n => `https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${n}/${n}-original.svg`;
+
 const langs = {
-  csharp:     "C#",
-  elixir:     "Elixir",
-  fsharp:     "F#",
-  gleam:      "Gleam",
-  haskell:    "Haskell",
-  java:       "Java",
-  javascript: "JavaScript",
-  kotlin:     "Kotlin",
-  python:     "Python",
-  ruby:       "Ruby",
-  scala:      "Scala",
-  swift:      "Swift",
-  typescript: "TypeScript",
+  csharp:     { label: "C#",         icon: DI("csharp")      },
+  elixir:     { label: "Elixir",     icon: DI("elixir")      },
+  fsharp:     { label: "F#",         icon: SI("fsharp")      },
+  gleam:      { label: "Gleam",      icon: "icons/gleam.png" },
+  haskell:    { label: "Haskell",    icon: SI("haskell")     },
+  java:       { label: "Java",       icon: DI("java")        },
+  javascript: { label: "JavaScript", icon: SI("javascript")  },
+  kotlin:     { label: "Kotlin",     icon: SI("kotlin")      },
+  python:     { label: "Python",     icon: SI("python")      },
+  ruby:       { label: "Ruby",       icon: SI("ruby")        },
+  scala:      { label: "Scala",      icon: SI("scala")       },
+  swift:      { label: "Swift",      icon: SI("swift")       },
+  typescript: { label: "TypeScript", icon: SI("typescript")  },
 };
+
+function iconImg(icon, size = 16) {
+  return icon
+    ? `<img src="${icon}" alt="" style="width:${size}px;height:${size}px;flex-shrink:0;vertical-align:middle;">`
+    : `<span style="display:inline-block;width:${size}px;height:${size}px;flex-shrink:0;"></span>`;
+}
 
 function extractCode(text) {
   const match = text.match(/^```[^\n]*\n([\s\S]*?)^```/m);
@@ -87,7 +96,7 @@ const langCategories = [
 ];
 
 let activeTopic = topics[0].label;
-let activeLangs = new Set(Object.values(langs));
+let activeLangs = new Set(Object.values(langs).map(l => l.label));
 
 function render() {
   // Topic pills
@@ -105,8 +114,8 @@ function render() {
     </div>`
   ).join("");
 
-  const pills = Object.values(langs).map(l =>
-    `<span class="pill ${activeLangs.has(l) ? 'active' : ''}" data-lang="${l}">${l}</span>`
+  const pills = Object.values(langs).map(({label, icon}) =>
+    `<span class="pill ${activeLangs.has(label) ? 'active' : ''}" data-lang="${label}">${iconImg(icon, 14)} ${label}</span>`
   ).join("");
 
   document.getElementById("lang-section").innerHTML = categoryRows + `<div class="lang-pills-row">${pills}</div>`;
@@ -117,7 +126,7 @@ function render() {
     ? filtered.map(s => `
         <div class="tile">
           <div class="tile-header">
-            <span>${s.lang}</span>
+            <span>${iconImg(s.icon)} ${s.lang}</span>
             ${s.docs ? `<a class="docs-link" href="${s.docs}" target="_blank" rel="noopener">Docs ↗</a>` : ""}
           </div>
           <pre><code class="language-${s.syntax || "plaintext"}">${s.code.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}</code></pre>
@@ -134,7 +143,7 @@ document.getElementById("topic-pills").addEventListener("click", e => {
 document.getElementById("lang-section").addEventListener("click", e => {
   if (e.target.dataset.cat !== undefined) {
     const group = langCategories[+e.target.dataset.cat].groups[+e.target.dataset.group];
-    activeLangs = new Set(group.langs.map(s => langs[s]));
+    activeLangs = new Set(group.langs.map(s => langs[s].label));
     render(); return;
   }
   const l = e.target.dataset.lang;
@@ -147,10 +156,10 @@ document.getElementById("lang-section").addEventListener("click", e => {
 
 Promise.all(
   topics.flatMap((t, i) =>
-    Object.entries(langs).map(([slug, label]) =>
+    Object.entries(langs).map(([slug, {label, icon}]) =>
       fetch(`${String(i + 1).padStart(2, "0")}-${t.slug}-${slug}.md`)
         .then(r => r.text())
-        .then(text => ({ topic: t.label, lang: label, syntax: slug, code: extractCode(text), docs: extractDocs(text) }))
+        .then(text => ({ topic: t.label, lang: label, icon, syntax: slug, code: extractCode(text), docs: extractDocs(text) }))
     )
   )
 ).then(results => {
