@@ -3,7 +3,8 @@
 [Docs](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/generics/)
 
 ```fsharp
-// F# infers generic type parameters automatically
+// F# infers generic type parameters
+// automatically
 let identity x = x
 
 let safeFirst = function

@@ -3,7 +3,8 @@
 [Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ```javascript
-// JavaScript has no generics; duck typing handles it naturally
+// JavaScript has no generics; duck typing
+// handles it naturally
 function identity(value) {
   return value;
 }

@@ -5,7 +5,8 @@
 ```gleam
 import gleam/io
 
-// Gleam has no interfaces; custom types + functions serve the same role
+// Gleam has no interfaces; custom types +
+// functions serve the same role
 type Animal {
   Dog
   Cat

@@ -8,7 +8,8 @@ defmodule Shapes do
   def area({:rect, w, h}),     do: w * h
 end
 
-IO.puts Shapes.area({:circle, 5})   # 78.53...
+IO.puts Shapes.area({:circle, 5})
+# 78.53...
 IO.puts Shapes.area({:rect, 3, 4})  # 12.0
 
 # Also works inline with case

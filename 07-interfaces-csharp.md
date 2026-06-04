@@ -6,7 +6,8 @@
 interface IAnimal
 {
     string Sound();
-    string Describe() => $"I make a {Sound()} sound"; // default implementation
+    string Describe() => $"I make a {Sound()} sound";
+    // default implementation
 }
 
 interface ISerializable

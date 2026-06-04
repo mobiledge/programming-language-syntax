@@ -3,7 +3,8 @@
 [Docs](https://elixir-lang.org/getting-started/basic-types.html#atoms)
 
 ```elixir
-# Elixir uses atoms as enum values; modules group related atoms
+# Elixir uses atoms as enum values; modules
+# group related atoms
 defmodule Direction do
   @north :north
   @south :south
@@ -18,6 +19,8 @@ defmodule Direction do
   def opposite(:west),  do: :east
 end
 
-IO.inspect Direction.all()            # [:north, :south, :east, :west]
-IO.inspect Direction.opposite(:north) # :south
+IO.inspect Direction.all()
+# [:north, :south, :east, :west]
+IO.inspect Direction.opposite(:north)
+# :south
 ```

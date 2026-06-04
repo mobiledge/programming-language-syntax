@@ -13,7 +13,8 @@ class Point:
 p = Point(3, 4)
 print(p.x)  # 3
 
-# dataclasses.replace for non-destructive update
+# dataclasses.replace for non-destructive
+# update
 from dataclasses import replace
 p2 = replace(p, x=10)
 ```

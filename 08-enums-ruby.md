@@ -3,7 +3,8 @@
 [Docs](https://ruby-doc.org/core/Symbol.html)
 
 ```ruby
-# Ruby has no built-in enums; symbols or constants are conventional
+# Ruby has no built-in enums; symbols or
+# constants are conventional
 module Direction
   NORTH = :north
   SOUTH = :south

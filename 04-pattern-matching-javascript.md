@@ -3,7 +3,8 @@
 [Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 
 ```javascript
-// JavaScript has no native pattern matching; destructuring + conditionals
+// JavaScript has no native pattern matching;
+// destructuring + conditionals
 function describe(point) {
   const { x, y } = point;
   if (x === 0 && y === 0) return "Origin";
@@ -12,5 +13,6 @@ function describe(point) {
   return `Point at (${x}, ${y})`;
 }
 
-console.log(describe({ x: 1, y: 0 })); // On x-axis at 1
+console.log(describe({ x: 1, y: 0 }));
+// On x-axis at 1
 ```

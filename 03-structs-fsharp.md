@@ -3,7 +3,8 @@
 [Docs](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/records)
 
 ```fsharp
-// F# uses record types as the idiomatic struct equivalent
+// F# uses record types as the idiomatic
+// struct equivalent
 type Point = { X: int; Y: int }
 
 let p = { X = 3; Y = 4 }

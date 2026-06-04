@@ -3,7 +3,8 @@
 [Docs](https://elixir-lang.org/getting-started/typespecs-and-behaviours.html)
 
 ```elixir
-# Elixir is dynamically typed; functions work on any type naturally
+# Elixir is dynamically typed; functions work
+# on any type naturally
 defmodule Stack do
   def new,          do: []
   def push(s, item), do: [item | s]

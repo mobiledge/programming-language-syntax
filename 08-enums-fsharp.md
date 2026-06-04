@@ -19,5 +19,6 @@ type Result<'T> =
 
 printfn "%A" North               // North
 printfn "%A" (opposite North)    // South
-printfn "%A" (Success 42)        // Success 42
+printfn "%A" (Success 42)
+// Success 42
 ```

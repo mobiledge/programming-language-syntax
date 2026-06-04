@@ -16,5 +16,6 @@ T First<T>(IList<T> list) => list[0];
 var s = new Stack<int>();
 s.Push(1);
 Console.WriteLine(s.Pop()); // 1
-Console.WriteLine(First(new[] { "a", "b" })); // a
+Console.WriteLine(First(new[] { "a", "b" }));
+// a
 ```

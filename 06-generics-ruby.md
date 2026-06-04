@@ -3,7 +3,8 @@
 [Docs](https://ruby-doc.org/core/Array.html)
 
 ```ruby
-# Ruby is dynamically typed; all containers are generic by default
+# Ruby is dynamically typed; all containers
+# are generic by default
 class Stack
   def initialize = @items = []
   def push(item) = @items.push(item)

@@ -21,7 +21,8 @@ fn opposite(d: Direction) -> Direction {
   }
 }
 
-// Custom type with data (like enum variants with values)
+// Custom type with data (like enum variants
+// with values)
 type Result(value, error) {
   Ok(value)
   Error(error)

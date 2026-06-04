@@ -16,7 +16,8 @@ class Dog(Animal):
     def sound(self) -> str:
         return "woof"
 
-# Protocol (structural typing, no inheritance needed)
+# Protocol (structural typing, no inheritance
+# needed)
 from typing import Protocol
 
 class Drawable(Protocol):

@@ -26,5 +26,6 @@ let d = Direction.north
 print(d.opposite) // south
 
 let r = Result.success(42)
-if case .success(let v) = r { print(v) } // 42
+if case .success(let v) = r { print(v) }
+// 42
 ```

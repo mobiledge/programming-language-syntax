@@ -3,7 +3,8 @@
 [Docs](https://elixir-lang.org/getting-started/typespecs-and-behaviours.html#behaviours)
 
 ```elixir
-# Elixir uses behaviours as interfaces and protocols for polymorphism
+# Elixir uses behaviours as interfaces and
+# protocols for polymorphism
 defmodule Animal do
   @callback sound() :: String.t()
 end
