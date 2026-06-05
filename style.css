@@ -39,16 +39,11 @@ h1 {
 
 .filter-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.6rem;
 }
 
-.filter-group label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #888;
-}
 
 .pill-group {
   display: flex;
@@ -142,11 +137,17 @@ h1 {
   gap: 0.5rem;
 }
 
+.category-rows {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .lang-category-row {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  flex-wrap: wrap;
 }
 
 .category-label {

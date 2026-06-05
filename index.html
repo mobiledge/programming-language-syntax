@@ -24,11 +24,9 @@
 
 <div class="filters">
   <div class="filter-group">
-    <label>Topic</label>
     <div class="pill-group" id="topic-pills"></div>
   </div>
   <div class="filter-group">
-    <label>Language</label>
     <div class="lang-section" id="lang-section"></div>
   </div>
 </div>
@@ -40,11 +38,11 @@ const topics = [
   { slug: "functions",        label: "Functions"        },
   { slug: "closures",         label: "Closures"         },
   { slug: "structs",          label: "Structs"           },
-  { slug: "pattern-matching", label: "Pattern Matching"  },
-  { slug: "error-handling",   label: "Error Handling"    },
-  { slug: "generics",         label: "Generics"          },
-  { slug: "interfaces",       label: "Interfaces/Traits" },
   { slug: "enums",            label: "Enums"             },
+  { slug: "pattern-matching", label: "Pattern Matching"  },
+  { slug: "interfaces",       label: "Interfaces/Traits" },
+  { slug: "generics",         label: "Generics"          },
+  { slug: "error-handling",   label: "Error Handling"    },
 ];
 
 const SI  = n => `https://cdn.simpleicons.org/${n}`;
@@ -124,7 +122,7 @@ function render() {
     `<span class="pill ${activeLangs.has(label) ? 'active' : ''}" data-lang="${label}">${iconImg(icon, 14)} ${label}</span>`
   ).join("");
 
-  document.getElementById("lang-section").innerHTML = categoryRows + `<div class="lang-pills-row">${pills}</div>`;
+  document.getElementById("lang-section").innerHTML = `<div class="category-rows">${categoryRows}</div>` + `<div class="lang-pills-row">${pills}</div>`;
 
   // Grid
   const filtered = snippets.filter(s => s.topic === activeTopic && activeLangs.has(s.lang));
